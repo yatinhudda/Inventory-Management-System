@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping(value = "/modify")
-public class ModifyProduct {
+public class ModifyProductController {
     @GetMapping
     public String modifyNothing(){
         System.out.println("Inside modify Nothing");

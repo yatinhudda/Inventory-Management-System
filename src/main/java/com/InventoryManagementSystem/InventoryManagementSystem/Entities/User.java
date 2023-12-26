@@ -2,7 +2,7 @@ package com.InventoryManagementSystem.InventoryManagementSystem.Entities;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class User {
     private int userId;
     private String userFirstName;
@@ -11,6 +11,16 @@ public class User {
     private String userMobile;
     private String userPassword;
     private boolean isAdminUser;
+
+    public User(int userId, String userFirstName, String userLastName, String userEmail, String userMobile, String userPassword, boolean isAdminUser) {
+        this.userId = userId;
+        this.userFirstName = userFirstName;
+        this.userLastName = userLastName;
+        this.userEmail = userEmail;
+        this.userMobile = userMobile;
+        this.userPassword = userPassword;
+        this.isAdminUser = isAdminUser;
+    }
 
     public void setUserId(int userId) {
         this.userId = userId;

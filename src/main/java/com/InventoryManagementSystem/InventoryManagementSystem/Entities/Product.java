@@ -2,12 +2,19 @@ package com.InventoryManagementSystem.InventoryManagementSystem.Entities;
 
 import org.springframework.stereotype.Component;
 
-@Component
+
 public class Product {
     private int productId;
     private String productName;
     private String productCategory;
     private String productBrand;
+
+    public Product(int productId, String productName, String productCategory, String productBrand) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productCategory = productCategory;
+        this.productBrand = productBrand;
+    }
 
     public void setProductId(int productId) {
         this.productId = productId;
