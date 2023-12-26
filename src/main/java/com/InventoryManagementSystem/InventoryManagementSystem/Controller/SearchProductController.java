@@ -16,8 +16,13 @@ public class SearchProductController {
     public Product searchById(@RequestParam("Id") int id){
         System.out.println("Inside Search by Id");
         SearchProduct searchProduct = new SearchProduct();
-
         return searchProduct.getProductById(id);
+    }
+@RequestMapping(method = RequestMethod.GET, value = "/searchByName")
+    public Product searchByProductName(@RequestParam("Name") String name){
+        System.out.println("Inside Search By Name");
+        SearchProduct searchProduct = new SearchProduct();
+        return searchProduct.getProductByName(name);
     }
 
 }
